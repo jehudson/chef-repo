@@ -1,0 +1,19 @@
+{
+    "name": "base",
+    "description": "role for all nodes",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[chef-client]",
+        "recipe[cron]",
+        "recipe[htop]",
+        "recipe[openssh]",
+        "recipe[sudo]",
+        "recipe[users]"
+
+          ]
+}

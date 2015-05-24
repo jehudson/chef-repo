@@ -12,6 +12,7 @@
 "recipe[mysql::server]",
 "recipe[zabbix]",
 "recipe[zabbix::database]",
-"recipe[zabbix::server]"
+"recipe[zabbix::server]",
+"recipe[zabbix::web_nginx]"
     ]
 }
