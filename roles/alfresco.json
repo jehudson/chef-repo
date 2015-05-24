@@ -8,6 +8,6 @@
     "override_attributes": {
     },
     "run_list": [
-        "recipe[chef-alfresco-master]"
+        "recipe[chef-alfresco]"
     ]
 }
