@@ -24,7 +24,7 @@ users_manage "users" do
   action [ :remove, :create ]
 end
 
-users manage "sudo" do
+users_manage "sudo" do
   group_id 27
   action [ :remove, :create]
 end

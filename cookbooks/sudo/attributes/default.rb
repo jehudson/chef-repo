@@ -19,7 +19,7 @@
 
 default['authorization']['sudo']['groups']            = ['sudo']
 default['authorization']['sudo']['users']             = []
-default['authorization']['sudo']['passwordless']      = false
+default['authorization']['sudo']['passwordless']      = true
 default['authorization']['sudo']['include_sudoers_d'] = false
 default['authorization']['sudo']['agent_forwarding']  = false
 default['authorization']['sudo']['sudoers_defaults']  = ['!lecture,tty_tickets,!fqdn']
