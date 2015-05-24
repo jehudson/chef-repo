@@ -1,4 +1,3 @@
-name              "chef-alfresco"
 maintainer       "Fletcher Nichol"
 maintainer_email "fnichol@nichol.ca"
 license          "Apache 2.0"
