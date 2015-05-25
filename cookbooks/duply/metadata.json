@@ -1,0 +1,40 @@
+{
+  "name": "duply",
+  "description": "Installs/Configures duply",
+  "long_description": "duply cookbook\n==============\n[![Build Status](https://travis-ci.org/nephilagraphic-cookbooks/duply.svg?branch=master)](https://travis-ci.org/nephilagraphic-cookbooks/duply)\n\nLWRP for Duplicity/Duply backup sets.\n\nSupports\n\n* Ubuntu 12.04\n* Ubuntu 14.04\n* Debian 7.4\n\n\nRequirements\n------------\n\nDuplicity installed.\n\n\nUsage\n-----\n\nAttributes\n----------\n\nRecipes\n-------\n\n### default\nInstalls the LWRP.  Does nothing else.\n\n\nResources\n---------\nThis cookbook provides a profile resource along with direct command execution.\n\n```ruby\nduply_profile \"profile_name\" do\n  destination \"file:///var/backups/test\"\n  encrypt_for [ keys['server'][:key_id], keys['alice'][:key_id], keys['bob'][:key_id] ]\n  signed_by   keys['server'][:key_id]\n  passphrase  keys['server'][:passphrase]\n  compression :bzip2\n  volume_size 50\n  keep_full   5\n  full_every  '2M'\n  includes [\n      '/etc/duply'\n  ]\n  excludes [\n      '**.asc'\n  ]\nend\n```\n\nExecute duply commands from the cookbook\n\n```ruby\nduply \"test-incr\" do\n  profile \"test\"\n  action :incremental\nend\n```\n\n\n\nLicense & Authors\n-----------------\n- Author:: Ted Chen (<ted@nephilagraphic.com>)\n\n```text\nCopyright 2014, Nephila Graphic\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n```",
+  "maintainer": "Nephila Graphic",
+  "maintainer_email": "ted@nephilagraphic.com",
+  "license": "All rights reserved",
+  "platforms": {
+    "ubuntu": ">= 0.0.0",
+    "debian": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.1.0"
+}

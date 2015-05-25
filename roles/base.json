@@ -13,7 +13,8 @@
         "recipe[htop]",
         "recipe[openssh]",
         "recipe[sudo]",
-        "recipe[users]"
+        "recipe[users]",
+        "recipe[zabbix::agent]"
 
           ]
 }
