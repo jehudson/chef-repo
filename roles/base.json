@@ -14,7 +14,11 @@
         "recipe[openssh]",
         "recipe[sudo]",
         "recipe[users]",
-        "recipe[zabbix::agent]"
+        "recipe[zabbix-agent]",
+        "recipe[build-essential]",
+        "recipe[timezone]",
+        "recipe[ntp]",
+        "recipe[tools]"
 
           ]
 }
