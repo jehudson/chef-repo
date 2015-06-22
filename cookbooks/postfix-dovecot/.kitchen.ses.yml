@@ -1,0 +1,19 @@
+suites:
+- name: default
+  run_list:
+    - recipe[postfix-dovecot_test]
+  attributes: { }
+- name: ses
+  run_list:
+    - recipe[minitest-handler]
+    - recipe[postfix-dovecot_test]
+  attributes:
+    postfix-dovecot:
+      ses:
+        enabled: true
+        email: <%= ENV['AMAZON_SES_EMAIL_FROM'] %> # SES valid from address, only used in tests
+        username: <%= ENV['AMAZON_SES_SMTP_USERNAME'] %>
+        password: <%= ENV['AMAZON_SES_SMTP_PASSWORD'] %>
+<% unless ENV['AMAZON_SES_REGION'].nil? %>
+        region: <%= ENV['AMAZON_SES_REGION'] %>
+<% end %>

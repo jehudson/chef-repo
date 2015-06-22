@@ -1,1 +1,1 @@
-default['default']['tools'] = %w(vim telnet ncaptool rsync screen  net-tools strace htop emacs sysstat dnsutils zip unzip links lsof bash-completion mlocate traceroute iotop iftop tcpdump nano screen rsync)
+default['default']['tools'] = %w(vim telnet ncaptool telnet rsync screen  net-tools strace htop emacs sysstat dnsutils zip unzip links lsof bash-completion mlocate traceroute iotop iftop tcpdump nano screen rsync)
