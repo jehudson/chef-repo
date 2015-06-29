@@ -1,0 +1,15 @@
+##############################
+####### Chef Controlled
+##############################
+
+
+server_host = localhost
+search_base = cn=Users,dc=sogo,dc=gonad,dc=org,dc=uk
+query_filter = (mail=%s)
+result_attribute = sAMAccountName
+result_format = %s@virtual.sog.gonad.org.uk
+bind = yes
+bind_dn = Administrator@gonad.org.uk
+bind_pw = Nidulans36
+start_tls = no
+version = 3

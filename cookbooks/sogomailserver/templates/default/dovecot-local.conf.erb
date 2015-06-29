@@ -1,0 +1,85 @@
+###########################
+##### Chef Controlled
+###########################
+
+
+
+protocols = imap sieve
+
+mail_home = /var/vmail/sieve/%d/%u
+mail_location = maildir:~/
+mail_uid = vmail
+mail_gid = vmail
+first_valid_uid = 107
+first_valid_gid = 8
+disable_plaintext_auth = no
+
+service auth {
+  unix_listener auth-userdb {
+    mode = 0600
+    user = vmail
+    group = vmail
+  }
+
+}
+
+userdb {
+    driver = ldap
+    args = /etc/dovecot/dovecot-ldap.conf
+}
+
+userdb {
+  driver = static
+  args = uid=vmail gid=vmail home=/var/vmail/%u
+}
+
+passdb {
+    driver = ldap
+    args = /etc/dovecot/dovecot-ldap.conf
+}
+
+passdb {
+  driver = static
+  args = nopassword=y allow_nets=127.0.0.1/32
+}
+
+protocol imap {
+  mail_plugins = quota imap_quota autocreate
+}
+
+service managesieve-login {
+  inet_listener sieve {
+    port = 4190
+  }
+}
+
+service managesieve {
+}
+
+protocol sieve {
+}
+
+plugin {
+  quota = maildir:User quota
+  quota_rule = *:storage=0
+
+  sieve = /var/vmail/sieve/%d/%u/sieve-script
+  sieve_global_path = /var/vmail/sieve/default.sieve
+  sieve_storage = /var/vmail/sieve/%d/%u
+
+  autocreate = Trash
+  autocreate2 = Spam
+  autocreate3 = Sent
+  autocreate4 = Drafts
+  autosubscribe = Trash
+  autosubscribe2 = Spam
+  autosubscribe3 = Sent
+  autosubscribe4 = Drafts
+
+}
+
+protocol lda {
+  postmaster_address = administrator@domain.local
+  mail_plugins = sieve
+  auth_socket_path = /var/run/dovecot/auth-userdb
+}

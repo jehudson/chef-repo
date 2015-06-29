@@ -1,0 +1,16 @@
+# uris = ldapi://%2Fvar%2Flib%2Fsamba%2Fprivate%2Fldapi
+# dn = "Administrator@gonad.org.uk"
+uris = ldap://127.0.0.1
+dn = CN=Adminstrator,CN=Users,DC=GONAD,DC=ORG,DC=UK
+dnpass = "Nidulans36"
+sasl_bind = no
+tls = no
+ldap_version = 3
+deref = never
+scope = subtree
+base = cn=Users,dc=gonad,dc=org,dc-uk
+auth_bind = yes
+user_filter = (&(objectClass=user)(sAMAccountName=%u))
+user_attrs = sAMAccountName=user,userPassword=password,=mail=maildir:/var/vmail/%Ld/%n, =home=/var$
+pass_filter = (&(objectClass=user)(sAMAccountName=%u))
+pass_attrs = sAMAccountName=user,userPassword=password
