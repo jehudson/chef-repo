@@ -2,7 +2,8 @@
   "id": "john",
   "password": "$1$NaONcW.i$tJKeRpZCzJ2PJb4OlqCQ11",
   "ssh_keys": [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDR3/KwwDwJTDjCi+Om6gqTdbKtskJhWL8rDEzlB4YY5kJH3IFBy7t/VvlAy7IylMmDOOejgIoZJ3SVRQ9TNoSmXgumREkdRoWD6/Bjx/AiBHbyRsgvoZVFIP1Zi0Ad+SbrfU89x1yP6DnedTm7UarLA57cmS6M/NL8ELKEuLgvCPO2fDrm5rHtFHJlN2EeHjylFL3APAECwsEu99Nm7NZ16TEH3UiZ0LLhkUX+NjGOubKaKlYQC3Vbm2Q+/vQKbzaPtzuYCmvLAA1maO95fP5Nuugbq3TOHliOV+sVwfmjsc/SnoLw9ZN+z+T+shiuH8xfJvnI3HWXwhVA1Rg2v2j9 john@bigboy"
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDLOCDXfWcELSUPBs/0CQ0YSY95wrIQB9KHR2qeFnwTAOSin3f/d587ttyW4g6YXotR+uLMU+ruBLhoSwpomYKYAr4C6uNbSqTDviPJ0NnrCd2J4NKeUsJ653vHCP9v8dYY2+xebPyZj+yz+rnzc2mlacr/8UyDhALZQxTVtkmiDJFiUULPzSK5qPhF5G/E2DLejMnc+ihuHyQljUsjYUrvQHjYND31y8FtonDlHfJPGi3z/qGKO7ppjVQEg7AquY85VVjKtrlUwWFNRtDwfxiSBLKuVqAzp4aqIz94R9DkIXzeCDxu9NPkNad2h7BND24SS2IDavx7bg5cyft1tyz john@bigboy
+john@bigboy"
 
   ],
   "groups": ["sudo", "users"],
